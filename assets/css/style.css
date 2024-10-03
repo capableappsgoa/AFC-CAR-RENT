@@ -27817,3 +27817,6 @@ select, .form-control, .form-select, textarea, input {
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
 }
+*{
+    scroll-behavior: smooth;
+}
