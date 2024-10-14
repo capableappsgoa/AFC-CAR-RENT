@@ -27853,3 +27853,20 @@ select, .form-control, .form-select, textarea, input {
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
 }
+
+/* Styles for mobile devices (max-width of 600px) */
+@media only screen and (max-width: 600px) {
+    .logoTop:not([draggable]) {
+        max-width: 59%;
+        height: 56px;
+        object-fit: cover;
+        /* margin-right: 0px; */
+    }
+  }
+  .th-menu-wrapper .mobile-logo {
+    padding-bottom: 30px;
+    padding-top: 40px;
+    display: block;
+    text-align: center;
+    background-color: white;
+}
