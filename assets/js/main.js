@@ -817,3 +817,50 @@
     
     }
 (jQuery);
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all buttons with the class 'whatsapp-button'
+    const whatsappButtons = document.querySelectorAll('.whatsapp-button');
+
+    // Add a click event listener for each button
+    whatsappButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Get the hotel title from the button's data attribute
+            const hotelName = this.getAttribute('data-destination');
+
+            // Custom message to be sent via WhatsApp
+            const message = `Hello, I would like to inquire about ${hotelName}. can you please provide more details.`;
+
+            // WhatsApp link (replace YOUR_CLIENT_NUMBER with the client's WhatsApp number)
+            const whatsappLink = `https://api.whatsapp.com/send?phone=+917058132412&text=${encodeURIComponent(message)}`;
+
+            // Open the WhatsApp link in a new tab
+            window.open(whatsappLink, '_blank');
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all buttons with the class 'whatsapp-button'
+    const whatsappButtons = document.querySelectorAll('.whatsapp-enquiry');
+
+    // Add a click event listener for each button
+    whatsappButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Get the hotel title from the button's data attribute
+            const hotelName = this.getAttribute('data-Enquiry');
+
+            // Custom message to be sent via WhatsApp
+            const message = `Hello, I would like to inquire about AFC Services. can you please provide more details about your services. I was looking for "mention your requirements"`;
+
+            // WhatsApp link (replace YOUR_CLIENT_NUMBER with the client's WhatsApp number)
+            const whatsappLink = `https://api.whatsapp.com/send?phone=+917058132412&text=${encodeURIComponent(message)}`;
+
+            // Open the WhatsApp link in a new tab
+            window.open(whatsappLink, '_blank');
+        });
+    });
+});

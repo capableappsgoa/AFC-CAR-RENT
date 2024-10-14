@@ -1,5 +1,7 @@
 @use "sass:math";
-
+html {
+    scroll-behavior: smooth;
+  }
 :root {
     --theme-color: #ffffff;
     --primary-color: #0700c8;
@@ -28,10 +30,7 @@
     --ripple-ani-duration: 2s
 }
 
-html,
-body {
-    scroll-behavior: auto !important
-}
+
 
 body {
     font-family: var(--body-font);
@@ -27817,6 +27816,40 @@ select, .form-control, .form-select, textarea, input {
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
 }
-*{
-    scroll-behavior: smooth;
+.logoTop:not([draggable]) {
+    max-width: 82%;
+    height: 73px;
+    object-fit: cover;
+    /* margin-right: 0px; */
+}
+
+select, .form-control, .form-select, textarea, input {
+    height: 56px;
+    padding: 0 25px 0 25px;
+    padding-right: 50px;
+    border: 1px solid var(--gray-color);
+    color: #ffffff;
+    background-color: #ffffff80;
+    font-size: 14px;
+    width: 100%;
+    font-family: var(--body-font);
+    font-weight: 400;
+    border-radius: 8px;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
+}
+select, .form-control, .form-select, textarea, input {
+    height: 56px;
+    padding: 0 25px 0 25px;
+    padding-right: 50px;
+    border: 1px solid var(--gray-color);
+    color: var(--body-color);
+    background-color: white;
+    font-size: 14px;
+    width: 100%;
+    font-family: var(--body-font);
+    font-weight: 400;
+    border-radius: 8px;
+    -webkit-transition: 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
