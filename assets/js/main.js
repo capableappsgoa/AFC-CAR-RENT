@@ -830,7 +830,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const message = `Hello, I would like to inquire about ${hotelName}. Please provide more details.`;
 
             // Encode the message properly for WhatsApp
-            const whatsappLink = `https://wa.me/917058132412?text=${encodeURIComponent(message)}`;
+            const whatsappLink = `https://wa.me/+917058132412?text=${encodeURIComponent(message)}`;
 
             // Open WhatsApp in a new tab with the pre-filled message
             window.open(whatsappLink, '_blank');
