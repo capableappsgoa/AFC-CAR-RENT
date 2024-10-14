@@ -820,23 +820,19 @@
 
 
 
+
 document.addEventListener('DOMContentLoaded', function () {
-    // Get all buttons with the class 'whatsapp-button'
     const whatsappButtons = document.querySelectorAll('.whatsapp-button');
 
-    // Add a click event listener for each button
     whatsappButtons.forEach(button => {
         button.addEventListener('click', function () {
-            // Get the hotel title from the button's data attribute
             const hotelName = this.getAttribute('data-destination');
+            const message = `Hello, I would like to inquire about ${hotelName}. Please provide more details.`;
 
-            // Custom message to be sent via WhatsApp
-            const message = `Hello, I would like to inquire about ${hotelName}. can you please provide more details.`;
+            // Encode the message properly for WhatsApp
+            const whatsappLink = `https://wa.me/917058132412?text=${encodeURIComponent(message)}`;
 
-            // WhatsApp link (replace YOUR_CLIENT_NUMBER with the client's WhatsApp number)
-            const whatsappLink = `https://api.whatsapp.com/send?phone=+917058132412&text=${encodeURIComponent(message)}`;
-
-            // Open the WhatsApp link in a new tab
+            // Open WhatsApp in a new tab with the pre-filled message
             window.open(whatsappLink, '_blank');
         });
     });
