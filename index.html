@@ -62,7 +62,37 @@
     </div> -->
 
 
-
+<!-- Modal (hidden by default) -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Select a North Goa Tour Option</h3>
+        <select id="north-goa-options" style="background-color: white;">
+            <option value="Panjim Church">Panjim Church</option>
+            <option value="Fontainhas Heritage Walk">Fontainhas Heritage Walk</option>
+            <option value="Dona Paula">Dona Paula</option>
+            <option value="Cruise">Cruise</option>
+            <option value="Old Goa Church">Old Goa Church</option>
+            <option value="Siridao Beach">Siridao Beach</option>
+            <option value="Houses of Goa Museum Porvorim">Houses of Goa Museum Porvorim</option>
+            <option value="Reis Magos Fort">Reis Magos Fort</option>
+            <option value="Museum of Goa MOG">Museum of Goa MOG</option>
+            <option value="Candolim Beach / Calangute Beach / Baga Beach">Candolim Beach / Calangute Beach / Baga Beach</option>
+            <option value="Madani Park">Madani Park</option>
+            <option value="Sequerim Beach">Sequerim Beach</option>
+            <option value="Dolphin Point">Dolphin Point</option>
+            <option value="Aguada Fort">Aguada Fort</option>
+            <option value="Kauratis Cave">Kauratis Cave</option>
+            <option value="AAA Museum">AAA Museum</option>
+            <option value="Sinq Nite Club">Sinq Nite Club</option>
+            <option value="Anjuna Wednesday Flea Market">Anjuna Wednesday Flea Market</option>
+            <option value="Vagator Hill Top View">Vagator Hill Top View</option>
+            <option value="Chapora Fort">Chapora Fort</option>
+            <option value="Chapora Mangrove Kayaking">Chapora Mangrove Kayaking</option>
+        </select>
+        <button id="send-whatsapp" class="buttonDesign">Send via WhatsApp</button>
+    </div>
+</div>
 
     <div class="th-menu-wrapper onepage-nav">
         <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
@@ -109,6 +139,7 @@
             </div>
         </div>
     </header>
+    
     <div class="hero-2" id="hero">
         <div class="hero2-overlay" data-bg-src="assets/img/bg/line-pattern.png"></div>
         <div class="swiper hero-slider-2" id="heroSlide2">
@@ -230,7 +261,7 @@
                             <div class="hero-img"><img src="assets/img/smallimg/sm2.png" alt=""></div>
                             <div class="hero-card_content">
                                 <h3 class="box-title">North Goa Tour</h3>
-                                <button data-Destination="North Goa Tour" class="whatsapp-button th-btn style2">Enquire
+                                <button data-region="North Goa" style="color: #5400fb;" class="th-btn style2 open-modal">Enquire
                                     Now <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
                                         viewBox="0 0 48 48">
                                         <path fill="#fff"
@@ -956,8 +987,8 @@
                                             class="woocommerce-review-link">(<span class="count">4.8</span> Rating)</a>
                                     </div>
 
-                                    <div class="tour-action"> <button data-Destination="North Goa Tours"
-                                            class="th-btn whatsapp-button style4 th-icon">Book Now <svg
+                                    <div class="tour-action"> <button data-region="North Goa"
+                                            class="th-btn style4 th-icon open-modal">Book Now <svg
                                                 xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30"
                                                 height="30" viewBox="0 0 48 48">
                                                 <path fill="#fff"

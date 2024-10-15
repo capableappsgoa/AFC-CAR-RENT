@@ -860,3 +860,105 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modal');
+    const closeModalBtn = document.querySelector('.close');
+    const sendWhatsAppBtn = document.getElementById('send-whatsapp');
+    const tourOptions = document.getElementById('north-goa-options');
+    let selectedRegion = '';
+
+    // Open modal when "North Goa" button is clicked
+    const openModalButtons = document.querySelectorAll('.open-modal');
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            selectedRegion = this.getAttribute('data-region'); // Get region name
+            modal.style.display = 'block'; // Show modal
+        });
+    });
+
+    // Close modal when clicking the 'x'
+    closeModalBtn.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside the modal content
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    // Send the WhatsApp message with the selected option
+    sendWhatsAppBtn.addEventListener('click', function () {
+        const selectedOption = tourOptions.value; // Get selected option
+        const message = `Hello, I would like to inquire about a tour in ${selectedRegion}. I am interested in the ${selectedOption}. Please provide more details.`;
+
+        const whatsappLink = `https://wa.me/917058132412?text=${encodeURIComponent(message)}`;
+        window.open(whatsappLink, '_blank'); // Open WhatsApp in a new tab
+
+        modal.style.display = 'none'; // Hide modal after sending the message
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('modal');
+    const closeModalBtn = document.querySelector('.close');
+    const sendWhatsAppBtn = document.getElementById('send-whatsapp');
+    const tourOptions = document.getElementById('north-goa-options');
+    let selectedRegion = '';
+
+    // Open modal when "North Goa" button is clicked
+    const openModalButtons = document.querySelectorAll('.open-modal');
+    openModalButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            selectedRegion = this.getAttribute('data-region'); // Get region name
+            modal.style.display = 'block'; // Show modal
+        });
+    });
+
+    // Close modal when clicking the 'x'
+    closeModalBtn.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside the modal content
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+    // Send the WhatsApp message with the selected option
+    sendWhatsAppBtn.addEventListener('click', function () {
+        const selectedOption = tourOptions.value; // Get selected option
+        const message = `Hello, I would like to inquire about a tour in ${selectedRegion}. I am interested in the ${selectedOption}. Please provide more details.`;
+
+        const whatsappLink = `https://wa.me/917058132412?text=${encodeURIComponent(message)}`;
+        window.open(whatsappLink, '_blank'); // Open WhatsApp in a new tab
+
+        modal.style.display = 'none'; // Hide modal after sending the message
+    });
+});

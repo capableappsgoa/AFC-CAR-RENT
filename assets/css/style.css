@@ -1,7 +1,9 @@
 @use "sass:math";
+
 html {
     scroll-behavior: smooth;
-  }
+}
+
 :root {
     --theme-color: #ffffff;
     --primary-color: #0700c8;
@@ -27685,42 +27687,52 @@ span.select2-selection.select2-selection--single:focus {
     margin: -35px 0;
     z-index: 8
 }
+
 .th-btn.style3 {
     background-color: #ffffff;
     color: #0008ff;
     box-shadow: none;
     border: none;
 }
+
 .tour-box .tour-content {
     padding: 24px 24px 16px 24px;
-    background: #5400fb;    ;
+    background: #5400fb;
+    ;
     color: white;
 }
+
 .th-btn.style4 {
     background-color: transparent;
     color: white;
     border: 1px solid white;
     padding: 14px 25px;
 }
+
 .tour-box .tour-action span {
     font-weight: 400;
     font-size: 16px;
     color: white;
 }
+
 .th-btn.style4:hover {
     color: white;
     border: 1px solid var(--theme-color);
 }
+
 .th-btn.style4:hover.th-icon:after {
     background-color: white;
 }
+
 .tour-box .tour-action .th-btn:after {
     -webkit-mask-image: url(../img/icon/arrow-right3.svg);
     mask-image: url(../img/icon/arrow-right3.svg);
 }
+
 .th-btn.style4.th-icon:after {
     background-color: white;
 }
+
 .tour-box_price {
     font-family: var(--body-font);
     font-size: 18px;
@@ -27728,36 +27740,46 @@ span.select2-selection.select2-selection--single:focus {
     color: white;
     margin-bottom: 35px;
 }
+
 .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: #0043ff;
     border-color: #000000;
 }
-.hero-style2 .hero-title{
+
+.hero-style2 .hero-title {
     color: #ffffff;
 }
-.hero-style2 .hero-text{
+
+.hero-style2 .hero-text {
     color: #ffffff;
 }
-.hero-style2 .hero-desc{
+
+.hero-style2 .hero-desc {
     color: #ffffff;
 }
+
 .th-btn.white-btn {
     background-color: #ffffff;
     color: #0d6efd;
 }
+
 .hero-card .box-title {
     color: white;
     margin-bottom: 0;
 }
+
 .hero-card_price {
     color: white;
 }
+
 .hero-card span {
     color: white;
 }
+
 .hero-2 .scroll-down .scroll-wrap {
     color: #ffffff;
 }
+
 .hero-2 .scroll-down .scroll-wrap span {
     min-width: 40px;
     height: 40px;
@@ -27765,6 +27787,7 @@ span.select2-selection.select2-selection--single:focus {
     border-radius: 50%;
     border: 1px solid #ffffff;
 }
+
 .hero-2 .hero-arrow {
     width: 32px;
     height: 32px;
@@ -27775,13 +27798,16 @@ span.select2-selection.select2-selection--single:focus {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
+
 .hero-2 .th-hero-bg {
     border-radius: 0px !important;
     overflow: hidden;
 }
-.hero-2 video{
+
+.hero-2 video {
     border-radius: 0px !important;
 }
+
 .hero-2 .th-hero-bg:before {
     content: '';
     position: absolute;
@@ -27790,18 +27816,26 @@ span.select2-selection.select2-selection--single:focus {
     background: linear-gradient(0deg, rgba(13, 13, 12, 0.4), rgba(13, 13, 12, 0.4)), url(2218.html);
     border-radius: 0px !important;
 }
-.hero-2{
+
+.hero-2 {
     border-radius: 0px;
 }
+
 .destination-box .box-title a {
     color: #ffffff;
 }
+
 .destination-box .destination-subtitle {
     font-size: 16px;
     color: white;
     margin-bottom: 8px;
 }
-select, .form-control, .form-select, textarea, input {
+
+select,
+.form-control,
+.form-select,
+textarea,
+input {
     height: 56px;
     padding: 0 25px 0 25px;
     padding-right: 50px;
@@ -27816,6 +27850,7 @@ select, .form-control, .form-select, textarea, input {
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
 }
+
 .logoTop:not([draggable]) {
     max-width: 82%;
     height: 73px;
@@ -27823,7 +27858,11 @@ select, .form-control, .form-select, textarea, input {
     /* margin-right: 0px; */
 }
 
-select, .form-control, .form-select, textarea, input {
+select,
+.form-control,
+.form-select,
+textarea,
+input {
     height: 56px;
     padding: 0 25px 0 25px;
     padding-right: 50px;
@@ -27838,7 +27877,12 @@ select, .form-control, .form-select, textarea, input {
     -webkit-transition: 0.4s ease-in-out;
     transition: 0.4s ease-in-out;
 }
-select, .form-control, .form-select, textarea, input {
+
+select,
+.form-control,
+.form-select,
+textarea,
+input {
     height: 56px;
     padding: 0 25px 0 25px;
     padding-right: 50px;
@@ -27862,11 +27906,76 @@ select, .form-control, .form-select, textarea, input {
         object-fit: cover;
         /* margin-right: 0px; */
     }
-  }
-  .th-menu-wrapper .mobile-logo {
+}
+
+.th-menu-wrapper .mobile-logo {
     padding-bottom: 30px;
     padding-top: 40px;
     display: block;
     text-align: center;
     background-color: white;
+}
+
+
+/* Basic styling for the card */
+
+
+.open-modal {
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Modal styling */
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    /* Ensure the modal is above other elements */
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    transition: ease-in-out 0.2ms;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    z-index: 1001;
+    /* Ensure modal content is also on top */
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.buttonDesign {
+    margin-top: 20px;
+    padding: 5px 5px;
+    border: solid 1px;
+    background: #a7fffc;
+    border-radius: 9px;
 }
