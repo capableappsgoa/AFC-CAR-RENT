@@ -27917,44 +27917,36 @@ input {
 }
 
 
-/* Basic styling for the card */
-
-
-.open-modal {
-    background-color: #ffffff;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/* Modal styling */
 /* Modal styling */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    /* Ensure the modal is above other elements */
-    padding-top: 100px;
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Semi-transparent background */
-    transition: ease-in-out 0.2ms;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    opacity: 1; 
+    transition: opacity 0.3s ease; 
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: auto;
+    background-color: #fff;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 400px;
-    z-index: 1001;
-    /* Ensure modal content is also on top */
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto; /* Enable scroll if content exceeds height */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
 }
 
@@ -27967,15 +27959,78 @@ input {
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
-.buttonDesign {
-    margin-top: 20px;
-    padding: 5px 5px;
-    border: solid 1px;
-    background: #a7fffc;
-    border-radius: 9px;
+/* Scrollable container for the checkboxes */
+#north-goa-options {
+    max-height: 300px; /* Limit the height */
+    overflow-y: auto; /* Add scroll if needed */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+/* Styling for checkboxes */
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+/* Highlight selected checkboxes */
+
+
+/* WhatsApp button styling */
+#send-whatsapp {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+#send-whatsapp:hover {
+    background-color: #1ebd5b;
+}
+
+/* Add some responsive design */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin-top: 30%;
+    }
+}
+input[type="checkbox"]~label:before {
+    content: '';
+    font-family: var(--icon-font);
+    font-weight: 700;
+    position: absolute;
+    left: 0px;
+    top: 3.5px;
+    background-color: #ffffff;
+    border: 1px solid var(--th-border-color);
+    height: 18px;
+    width: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-size: 12px;
+}
+input[type="checkbox"]:checked~label:before {
+    content: "\f00c";
+    color: #ffffff;
+    background-color: #3c73f5;
+    border-radius: 3px;
+    border-color: var(--theme-color);
 }

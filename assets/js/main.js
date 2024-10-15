@@ -923,42 +923,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById('modal');
-    const closeModalBtn = document.querySelector('.close');
-    const sendWhatsAppBtn = document.getElementById('send-whatsapp');
-    const tourOptions = document.getElementById('north-goa-options');
-    let selectedRegion = '';
-
-    // Open modal when "North Goa" button is clicked
-    const openModalButtons = document.querySelectorAll('.open-modal');
-    openModalButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            selectedRegion = this.getAttribute('data-region'); // Get region name
-            modal.style.display = 'block'; // Show modal
-        });
-    });
-
-    // Close modal when clicking the 'x'
-    closeModalBtn.addEventListener('click', function () {
-        modal.style.display = 'none';
-    });
-
-    // Close modal when clicking outside the modal content
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
+document.getElementById("send-whatsapp").addEventListener("click", function () {
+    const selectedOptions = [];
+    
+    // Get all checkboxes within the modal
+    const checkboxes = document.querySelectorAll('#north-goa-options input[type="checkbox"]');
+    
+    // Loop through all checkboxes and push selected ones to an array
+    checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+            selectedOptions.push(checkbox.value);  // Ensure the value attribute is being used
         }
-    };
-
-    // Send the WhatsApp message with the selected option
-    sendWhatsAppBtn.addEventListener('click', function () {
-        const selectedOption = tourOptions.value; // Get selected option
-        const message = `Hello, I would like to inquire about a tour in ${selectedRegion}. I am interested in the ${selectedOption}. Please provide more details.`;
-
-        const whatsappLink = `https://wa.me/917058132412?text=${encodeURIComponent(message)}`;
-        window.open(whatsappLink, '_blank'); // Open WhatsApp in a new tab
-
-        modal.style.display = 'none'; // Hide modal after sending the message
     });
+
+    // If no options are selected, alert the user
+    if (selectedOptions.length === 0) {
+        alert("Please select at least one option.");
+        return;
+    }
+
+    // Format the message for WhatsApp
+    const message = "Hi I'm interested in AFC GOA TOURS, I have selected the following North Goa tour options: " + selectedOptions.join(", ");
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message);
+
+    // Replace the number with your client’s WhatsApp number in international format
+    const whatsappNumber = "+917058132412"; // Example: +91 for India
+
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Redirect the user to WhatsApp with the prefilled message
+    window.open(whatsappURL, "_blank");
 });

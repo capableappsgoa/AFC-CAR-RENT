@@ -66,31 +66,95 @@
 <div id="modal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <h3>Select a North Goa Tour Option</h3>
-        <select id="north-goa-options" style="background-color: white;">
-            <option value="Panjim Church">Panjim Church</option>
-            <option value="Fontainhas Heritage Walk">Fontainhas Heritage Walk</option>
-            <option value="Dona Paula">Dona Paula</option>
-            <option value="Cruise">Cruise</option>
-            <option value="Old Goa Church">Old Goa Church</option>
-            <option value="Siridao Beach">Siridao Beach</option>
-            <option value="Houses of Goa Museum Porvorim">Houses of Goa Museum Porvorim</option>
-            <option value="Reis Magos Fort">Reis Magos Fort</option>
-            <option value="Museum of Goa MOG">Museum of Goa MOG</option>
-            <option value="Candolim Beach / Calangute Beach / Baga Beach">Candolim Beach / Calangute Beach / Baga Beach</option>
-            <option value="Madani Park">Madani Park</option>
-            <option value="Sequerim Beach">Sequerim Beach</option>
-            <option value="Dolphin Point">Dolphin Point</option>
-            <option value="Aguada Fort">Aguada Fort</option>
-            <option value="Kauratis Cave">Kauratis Cave</option>
-            <option value="AAA Museum">AAA Museum</option>
-            <option value="Sinq Nite Club">Sinq Nite Club</option>
-            <option value="Anjuna Wednesday Flea Market">Anjuna Wednesday Flea Market</option>
-            <option value="Vagator Hill Top View">Vagator Hill Top View</option>
-            <option value="Chapora Fort">Chapora Fort</option>
-            <option value="Chapora Mangrove Kayaking">Chapora Mangrove Kayaking</option>
-        </select>
-        <button id="send-whatsapp" class="buttonDesign">Send via WhatsApp</button>
+        <h3>Select North Goa Tour Options</h3>
+        <!-- Scrollable checkboxes -->
+        <div id="north-goa-options">
+            <div class="checkbox-option">
+                <input type="checkbox" id="option1" value="Panjim Church">
+                <label for="option1">Panjim Church</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option2" value="Fontainhas Heritage Walk">
+                <label for="option2">Fontainhas Heritage Walk</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option3" value="Dona Paula">
+                <label for="option3">Dona Paula</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option4" value="Cruise">
+                <label for="option4">Cruise</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option5" value="Old Goa Church">
+                <label for="option5">Old Goa Church</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option6" value="Siridao Beach">
+                <label for="option6">Siridao Beach</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option7" value="Houses of Goa Museum Porvorim">
+                <label for="option7">Houses of Goa Museum Porvorim</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option8" value="Reis Magos Fort">
+                <label for="option8">Reis Magos Fort</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option9" value="Museum of Goa MOG">
+                <label for="option9">Museum of Goa MOG</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option10" value="Candolim Beach / Calangute Beach / Baga Beach">
+                <label for="option10">Candolim Beach / Calangute Beach / Baga Beach</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option11" value="Madani Park">
+                <label for="option11">Madani Park</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option12" value="Sequerim Beach">
+                <label for="option12">Sequerim Beach</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option13" value="Dolphin Point">
+                <label for="option13">Dolphin Point</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option14" value="Aguada Fort">
+                <label for="option14">Aguada Fort</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option15" value="Kauratis Cave">
+                <label for="option15">Kauratis Cave</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option16" value="AAA Museum">
+                <label for="option16">AAA Museum</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option17" value="Sinq Nite Club">
+                <label for="option17">Sinq Nite Club</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option18" value="Anjuna Wednesday Flea Market">
+                <label for="option18">Anjuna Wednesday Flea Market</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option19" value="Vagator Hill Top View">
+                <label for="option19">Vagator Hill Top View</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option20" value="Chapora Fort">
+                <label for="option20">Chapora Fort</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="option21" value="Chapora Mangrove Kayaking">
+                <label for="option21">Chapora Mangrove Kayaking</label>
+            </div>
+        </div>
+        <button id="send-whatsapp">Send via WhatsApp</button>
     </div>
 </div>
 
@@ -987,7 +1051,7 @@
                                             class="woocommerce-review-link">(<span class="count">4.8</span> Rating)</a>
                                     </div>
 
-                                    <div class="tour-action"> <button data-region="North Goa"
+                                    <div class="tour-action"> <button id="" data-region="North Goa"
                                             class="th-btn style4 th-icon open-modal">Book Now <svg
                                                 xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30"
                                                 height="30" viewBox="0 0 48 48">
