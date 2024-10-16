@@ -27918,6 +27918,8 @@ input {
 
 
 /* Modal styling */
+
+
 .modal {
     display: none; 
     position: fixed; 
@@ -27988,6 +27990,19 @@ input {
 
 /* WhatsApp button styling */
 #send-whatsapp {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+#send-whatsapp-south {
     background-color: #25d366;
     color: white;
     border: none;
